@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#080D17</color>
+    <color name="panel">#121B2C</color>
+    <color name="button">#1B2942</color>
+    <color name="button_light">#263A59</color>
+    <color name="button_pressed">#34547E</color>
+    <color name="border">#2A3B56</color>
+    <color name="text">#F4F7FF</color>
+    <color name="muted">#9AAAC3</color>
+    <color name="accent">#8AB4FF</color>
+    <color name="accent_light">#B5D0FF</color>
+    <color name="on_accent">#08162B</color>
+    <color name="danger">#FFADB5</color>
+</resources>

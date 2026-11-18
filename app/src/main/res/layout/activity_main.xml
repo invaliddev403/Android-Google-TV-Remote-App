@@ -20,10 +20,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
+            android:letterSpacing="-0.02"
             android:text="GTV Remote"
             android:textColor="@color/text"
-            android:textSize="32sp"
-            android:letterSpacing="-0.02" />
+            android:textSize="32sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:text="Checking Bluetooth HID support…"
+                android:text="Not connected"
                 android:textColor="@color/accent"
                 android:textSize="15sp" />
 
@@ -55,7 +55,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
+                android:text="Phone and TV must use the same local network"
                 android:textColor="@color/muted"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/transport_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/text"
                 android:textSize="13sp" />
         </LinearLayout>
 
@@ -66,7 +75,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
                 <Button android:id="@+id/key_up" style="@style/NavButton" android:tag="up" android:text="↑" />
                 <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
@@ -76,7 +84,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <Button android:id="@+id/key_left" style="@style/NavButton" android:tag="left" android:text="←" />
                 <Button android:id="@+id/key_ok" style="@style/PrimaryNavButton" android:tag="ok" android:text="OK" />
                 <Button android:id="@+id/key_right" style="@style/NavButton" android:tag="right" android:text="→" />
@@ -86,7 +93,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
                 <Button android:id="@+id/key_down" style="@style/NavButton" android:tag="down" android:text="↓" />
                 <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
@@ -97,7 +103,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:orientation="horizontal">
-
                 <Button android:id="@+id/key_back" style="@style/RemoteButton" android:tag="back" android:text="Back" />
                 <Button android:id="@+id/key_home" style="@style/RemoteButton" android:tag="home" android:text="Home" />
                 <Button android:id="@+id/key_power" style="@style/DangerButton" android:tag="power" android:text="Power" />
@@ -106,12 +111,10 @@
 
         <LinearLayout style="@style/SectionCard">
             <TextView style="@style/SectionLabel" android:text="Volume" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <Button android:id="@+id/key_volume_up" style="@style/RemoteButton" android:tag="volume_up" android:text="Vol +" />
                 <Button android:id="@+id/key_volume_down" style="@style/RemoteButton" android:tag="volume_down" android:text="Vol −" />
                 <Button android:id="@+id/key_mute" style="@style/RemoteButton" android:tag="mute" android:text="Mute" />
@@ -120,22 +123,18 @@
 
         <LinearLayout style="@style/SectionCard">
             <TextView style="@style/SectionLabel" android:text="Media" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <Button android:id="@+id/key_previous" style="@style/RemoteButton" android:tag="previous" android:text="⏮ Prev" />
                 <Button android:id="@+id/key_play_pause" style="@style/PrimaryButton" android:tag="play_pause" android:text="⏯ Play / Pause" />
                 <Button android:id="@+id/key_next" style="@style/RemoteButton" android:tag="next" android:text="Next ⏭" />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <Button android:id="@+id/key_rewind" style="@style/RemoteButton" android:tag="rewind" android:text="⏪ Rewind" />
                 <Button android:id="@+id/key_stop" style="@style/RemoteButton" android:tag="stop" android:text="⏹ Stop" />
                 <Button android:id="@+id/key_fast_forward" style="@style/RemoteButton" android:tag="fast_forward" android:text="Forward ⏩" />
@@ -144,7 +143,6 @@
 
         <LinearLayout style="@style/SectionCard">
             <TextView style="@style/SectionLabel" android:text="Keyboard" />
-
             <EditText
                 android:id="@+id/text_input"
                 android:layout_width="match_parent"
@@ -159,14 +157,12 @@
                 android:textColor="@color/text"
                 android:textColorHint="@color/muted"
                 android:textSize="15sp" />
-
             <Button
                 android:id="@+id/type_text"
                 style="@style/PrimaryButton"
                 android:layout_width="match_parent"
                 android:layout_marginTop="10dp"
                 android:text="Type on TV" />
-
             <TextView
                 style="@style/HelperText"
                 android:text="Focus a TV text field first. Standard letters, numbers, and symbols are supported; use OK to submit." />
@@ -174,7 +170,6 @@
 
         <LinearLayout style="@style/SectionCard">
             <TextView style="@style/SectionLabel" android:text="Saved devices" />
-
             <Spinner
                 android:id="@+id/device_spinner"
                 android:layout_width="match_parent"
@@ -182,36 +177,35 @@
                 android:background="@drawable/input_background"
                 android:paddingLeft="12dp"
                 android:paddingRight="12dp" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:orientation="horizontal">
-
                 <Button android:id="@+id/connect_device" style="@style/PrimaryButton" android:text="Connect" />
                 <Button android:id="@+id/rename_device" style="@style/RemoteButton" android:text="Rename" />
             </LinearLayout>
-
             <Button
                 android:id="@+id/pair_device"
                 style="@style/PrimaryButton"
                 android:layout_width="match_parent"
                 android:layout_marginTop="4dp"
                 android:text="Pair new device" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
-
                 <Button android:id="@+id/disconnect_device" style="@style/RemoteButton" android:text="Disconnect" />
-                <Button android:id="@+id/bluetooth_settings" style="@style/RemoteButton" android:text="BT settings" />
+                <Button android:id="@+id/forget_device" style="@style/RemoteButton" android:text="Forget" />
             </LinearLayout>
-
+            <Button
+                android:id="@+id/wifi_settings"
+                style="@style/RemoteButton"
+                android:layout_width="match_parent"
+                android:text="Wi-Fi settings" />
             <TextView
                 style="@style/HelperText"
-                android:text="To pair, select this phone in Google TV → Settings → Remotes &amp; Accessories → Add accessory. Remove system Bluetooth bonds in BT settings." />
+                android:text="Pair using the TV's IP address and the code shown on the TV. Find the IP on the TV under Settings → Network &amp; Internet. The phone and TV must be on the same network." />
         </LinearLayout>
 
         <TextView

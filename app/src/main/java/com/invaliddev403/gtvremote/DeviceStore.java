@@ -81,6 +81,14 @@ final class DeviceStore {
         throw new IllegalArgumentException("Device is not saved");
     }
 
+    void remove(String address) {
+        ArrayList<Entry> devices = new ArrayList<>(all());
+        for (int index = devices.size() - 1; index >= 0; index--) {
+            if (devices.get(index).address.equalsIgnoreCase(address)) devices.remove(index);
+        }
+        save(devices);
+    }
+
     Entry find(String address) {
         if (address == null) return null;
         for (Entry device : all()) {

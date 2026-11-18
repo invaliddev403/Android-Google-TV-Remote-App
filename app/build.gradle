@@ -10,8 +10,8 @@ android {
         applicationId 'com.invaliddev403.gtvremote'
         minSdk 28
         targetSdk 36
-        versionCode 3
-        versionName '1.1.0'
+        versionCode 9
+        versionName '2.0.0'
     }
 
     buildFeatures {
